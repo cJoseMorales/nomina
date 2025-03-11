@@ -1,8 +1,63 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Administración del Sistema</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Puestos</h5>
+                    <p class="card-text">Gestiona los puestos de trabajo de la empresa.</p>
+                    <a asp-controller="Puesto" asp-action="Index" class="btn btn-primary">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Departamentos</h5>
+                    <p class="card-text">Administra los departamentos de la empresa.</p>
+                    <a asp-controller="Departamento" asp-action="Index" class="btn btn-primary">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Empleados</h5>
+                    <p class="card-text">Gestiona los empleados registrados.</p>
+                    <a asp-controller="Empleado" asp-action="Index" class="btn btn-primary">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Tipos de Transacción</h5>
+                    <p class="card-text">Administra los diferentes tipos de transacciones.</p>
+                    <a asp-controller="TipoDeTransaccion" asp-action="Index" class="btn btn-primary">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Transacciones</h5>
+                    <p class="card-text">Consulta y administra las transacciones realizadas.</p>
+                    <a asp-controller="Transaccion" asp-action="Index" class="btn btn-primary">Administrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Asientos Contables</h5>
+                    <p class="card-text">Gestiona los asientos contables registrados.</p>
+                    <a asp-controller="AsientoContable" asp-action="Index" class="btn btn-primary">Administrar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

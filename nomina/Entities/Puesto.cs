@@ -10,6 +10,7 @@ public class Puesto
 {
     [Key] [Column("id")] public int Id { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio.", AllowEmptyStrings = false)]
     [Column("nombre")] [StringLength(36)] public string Nombre { get; set; } = null!;
 
     [Column("descripcion", TypeName = "text")]

@@ -10,14 +10,26 @@ public class Empleado
 {
     [Key] [Column("id")] public int Id { get; set; }
 
-    [Column("cedula")] [StringLength(11)] public string Cedula { get; set; } = null!;
+    [Required(ErrorMessage = "Este campo es obligatorio.", AllowEmptyStrings = false)]
+    [DominicanIdCard]
+    [Column("cedula")]
+    [StringLength(11)]
+    public string Cedula { get; set; } = null!;
 
-    [Column("nombre")] [StringLength(36)] public string Nombre { get; set; } = null!;
+    [Required(ErrorMessage = "Este campo es obligatorio.", AllowEmptyStrings = false)]
+    [Column("nombre")]
+    [StringLength(36)]
+    public string Nombre { get; set; } = null!;
 
-    [Column("departamento")] public int Departamento { get; set; }
+    [Required(ErrorMessage = "Este campo es obligatorio.")]
+    [Column("departamento")]
+    public int Departamento { get; set; }
 
-    [Column("puesto")] public int Puesto { get; set; }
+    [Required(ErrorMessage = "Este campo es obligatorio.")]
+    [Column("puesto")]
+    public int Puesto { get; set; }
 
+    [Required(ErrorMessage = "Este campo es obligatorio.")]
     [Column("salario_mensual")]
     [Precision(10)]
     public decimal SalarioMensual { get; set; }
