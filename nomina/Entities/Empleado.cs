@@ -23,14 +23,18 @@ public class Empleado
 
     [Required(ErrorMessage = "Este campo es obligatorio.")]
     [Column("departamento")]
-    public int Departamento { get; set; }
+    public int DepartamentoId { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio.")]
     [Column("puesto")]
-    public int Puesto { get; set; }
+    public int PuestoId { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio.")]
     [Column("salario_mensual")]
     [Precision(10)]
     public decimal SalarioMensual { get; set; }
+    
+    public Departamento? Departamento { get; set; }
+    
+    public Puesto? Puesto { get; set; }
 }

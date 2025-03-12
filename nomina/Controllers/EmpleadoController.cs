@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using nomina.Context;
 using nomina.Entities;
@@ -10,7 +11,10 @@ public class EmpleadoController(NominaContext context) : Controller
     // GET: Empleado
     public async Task<IActionResult> Index()
     {
-        return View(await context.Empleado.ToListAsync());
+        return View(await context.Empleado
+            .Include(empleado => empleado.Departamento)
+            .Include(empleado => empleado.Puesto)
+            .ToListAsync());
     }
 
     // GET: Empleado/Details/5
@@ -22,6 +26,8 @@ public class EmpleadoController(NominaContext context) : Controller
         }
 
         var empleado = await context.Empleado
+            .Include(empleado => empleado.Departamento)
+            .Include(empleado => empleado.Puesto)
             .FirstOrDefaultAsync(m => m.Id == id);
         if (empleado == null)
         {
@@ -34,6 +40,8 @@ public class EmpleadoController(NominaContext context) : Controller
     // GET: Empleado/Create
     public IActionResult Create()
     {
+        ViewData["Puestos"] = new SelectList(context.Puesto, "Id", "Nombre");
+        ViewData["Departamentos"] = new SelectList(context.Departamento, "Id", "Nombre");
         return View();
     }
 
@@ -42,7 +50,7 @@ public class EmpleadoController(NominaContext context) : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Cedula,Nombre,Departamento,Puesto,SalarioMensual")] Empleado empleado)
+    public async Task<IActionResult> Create([Bind("Id,Cedula,Nombre,DepartamentoId,PuestoId,SalarioMensual")] Empleado empleado)
     {
         if (ModelState.IsValid)
         {
@@ -50,6 +58,9 @@ public class EmpleadoController(NominaContext context) : Controller
             await context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        
+        ViewData["Puestos"] = new SelectList(context.Puesto, "Id", "Nombre");
+        ViewData["Departamentos"] = new SelectList(context.Departamento, "Id", "Nombre");
         return View(empleado);
     }
 
@@ -66,6 +77,9 @@ public class EmpleadoController(NominaContext context) : Controller
         {
             return NotFound();
         }
+        
+        ViewData["Puestos"] = new SelectList(context.Puesto, "Id", "Nombre");
+        ViewData["Departamentos"] = new SelectList(context.Departamento, "Id", "Nombre");
         return View(empleado);
     }
 
@@ -74,7 +88,7 @@ public class EmpleadoController(NominaContext context) : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Cedula,Nombre,Departamento,Puesto,SalarioMensual")] Empleado empleado)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Cedula,Nombre,DepartamentoId,PuestoId,SalarioMensual")] Empleado empleado)
     {
         if (id != empleado.Id)
         {

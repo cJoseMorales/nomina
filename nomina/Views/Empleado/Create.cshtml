@@ -22,14 +22,14 @@
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Departamento" class="control-label"></label>
-                <input asp-for="Departamento" class="form-control" />
-                <span asp-validation-for="Departamento" class="text-danger"></span>
+                <label asp-for="DepartamentoId" class="control-label">Departamento</label>
+                <select asp-for="DepartamentoId" class ="form-control" asp-items="ViewBag.Departamentos"></select>
+                <span asp-validation-for="DepartamentoId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Puesto" class="control-label"></label>
-                <input asp-for="Puesto" class="form-control" />
-                <span asp-validation-for="Puesto" class="text-danger"></span>
+                <label asp-for="PuestoId" class="control-label">Puesto</label>
+                <select asp-for="PuestoId" class ="form-control" asp-items="ViewBag.Puestos"></select>
+                <span asp-validation-for="PuestoId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="SalarioMensual" class="control-label">Salario Mensual</label>

@@ -12,27 +12,28 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                Cédula
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Departamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Puesto)
-            </th>
-            <th>
-                Salario Mensual
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            Cédula
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            Departamento
+        </th>
+        <th>
+            Puesto
+        </th>
+        <th>
+            Salario Mensual
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Cedula)
@@ -41,10 +42,10 @@
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Departamento)
+                @Html.DisplayFor(modelItem => item.Departamento!.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Puesto)
+                @Html.DisplayFor(modelItem => item.Puesto!.Nombre)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SalarioMensual)
@@ -55,6 +56,6 @@
                 <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>
