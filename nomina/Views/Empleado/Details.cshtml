@@ -1,48 +1,42 @@
 @model nomina.Entities.Empleado
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del Empleado";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Detalles del Empleado</h1>
+<div class="container mt-4">
+    <h2 class="fw-bold mb-4">
+        <i class="bi bi-person-lines-fill me-2"></i> Detalles del Empleado
+    </h2>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            Cédula
-        </dt>
-        <dd class = "col-sm-10">
-            Cédula
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            Departamento
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Departamento!.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            Puesto
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Puesto!.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            Salario Mensual
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SalarioMensual)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Volver</a>
+    <div class="card shadow-sm rounded-4">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">Cédula</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Cedula)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Nombre</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Nombre)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Departamento</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Departamento!.Nombre)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Puesto</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Puesto!.Nombre)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Salario Mensual</dt>
+                <dd class="col-sm-9">@String.Format("{0:C}", Model.SalarioMensual)</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Volver
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">
+            <i class="bi bi-pencil-square"></i> Editar
+        </a>
+    </div>
 </div>

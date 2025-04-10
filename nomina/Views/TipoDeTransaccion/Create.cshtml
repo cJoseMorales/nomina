@@ -1,53 +1,66 @@
 @model nomina.Entities.TipoDeTransaccion
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear Tipo de Transacción";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h4>Crear Tipo de Transacción</h4>
-<hr/>
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control"/>
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Operacion" class="control-label">Operación</label>
-                <select asp-for="Operacion" class="form-control">
-                    <option value="INGRESO">INGRESO</option>
-                    <option value="DEDUCCION">DEDUCCIÓN</option>
-                </select>
-                <span asp-validation-for="Operacion" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="DependeDeSalario"/> Depende del Salario
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <select asp-for="Estado" class="form-control">
-                    <option value="ACTIVO">ACTIVO</option>
-                    <option value="INACTIVO">INACTIVO</option>
-                </select>
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Crear" class="btn btn-primary"/>
-            </div>
-        </form>
+<div class="container mt-4">
+    <h2 class="fw-bold mb-4">
+        <i class="bi bi-plus-circle me-2"></i> Crear Tipo de Transacción
+    </h2>
+
+    <div class="card shadow-sm rounded-4">
+        <div class="card-body">
+            <form asp-action="Create" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label fw-semibold">Nombre</label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Nombre del tipo de transacción" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Operacion" class="form-label fw-semibold">Operación</label>
+                    <select asp-for="Operacion" class="form-select">
+                        <option value="INGRESO">INGRESO</option>
+                        <option value="DEDUCCION">DEDUCCIÓN</option>
+                    </select>
+                    <span asp-validation-for="Operacion" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input class="form-check-input" asp-for="DependeDeSalario" />
+                    <label class="form-check-label fw-semibold" asp-for="DependeDeSalario">
+                        Depende del Salario
+                    </label>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Estado" class="form-label fw-semibold">Estado</label>
+                    <select asp-for="Estado" class="form-select">
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="INACTIVO">INACTIVO</option>
+                    </select>
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-circle"></i> Crear
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Volver</a>
-</div>
-
 @section Scripts {
-    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

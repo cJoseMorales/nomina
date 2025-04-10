@@ -1,0 +1,587 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\penaa\\source\\repos\\nomina\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\transaccion\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\transaccion\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\transaccion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\transaccion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\transaccion\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\transaccion\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\controllers\\empleadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\asientocontable\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\asientocontable\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\tipodetransaccion\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\tipodetransaccion\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\asientocontable\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\asientocontable\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\asientocontable\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\asientocontable\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\asientocontable\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\asientocontable\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\asientocontable\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\asientocontable\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\empleado\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\empleado\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\empleado\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\empleado\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\empleado\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\empleado\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\empleado\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\empleado\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\empleado\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\empleado\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\tipodetransaccion\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\tipodetransaccion\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\tipodetransaccion\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\tipodetransaccion\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\tipodetransaccion\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\tipodetransaccion\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\tipodetransaccion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\tipodetransaccion\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\puesto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\puesto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\puesto\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\puesto\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\puesto\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\puesto\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\puesto\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\puesto\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\departamento\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\departamento\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\departamento\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\departamento\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\departamento\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\departamento\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\departamento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\departamento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\puesto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\puesto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|c:\\users\\penaa\\source\\repos\\nomina\\nomina\\entities\\tipodetransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4315BE16-AF0E-41ED-B20E-5401A046CCED}|nomina\\nomina.csproj|solutionrelative:nomina\\entities\\tipodetransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Transaccion\\Create.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Transaccion\\Create.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Transaccion\\Create.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Transaccion\\Create.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:42:02.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Transaccion\\Edit.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Transaccion\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Transaccion\\Edit.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Transaccion\\Edit.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:37:50.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Transaccion\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Transaccion\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Transaccion\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Transaccion\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwDsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:37:19.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Details.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\AsientoContable\\Details.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Details.cshtml",
+              "RelativeToolTip": "nomina\\Views\\AsientoContable\\Details.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:23:52.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Delete.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\AsientoContable\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Delete.cshtml",
+              "RelativeToolTip": "nomina\\Views\\AsientoContable\\Delete.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAwwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:23:28.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Create.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\AsientoContable\\Create.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Create.cshtml",
+              "RelativeToolTip": "nomina\\Views\\AsientoContable\\Create.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:21:44.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmpleadoController.cs",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Controllers\\EmpleadoController.cs",
+              "RelativeDocumentMoniker": "nomina\\Controllers\\EmpleadoController.cs",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Controllers\\EmpleadoController.cs",
+              "RelativeToolTip": "nomina\\Controllers\\EmpleadoController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAA2wDgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:14:55.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Edit.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\AsientoContable\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Edit.cshtml",
+              "RelativeToolTip": "nomina\\Views\\AsientoContable\\Edit.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:24:18.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Delete.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Departamento\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Delete.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Departamento\\Delete.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:50:46.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Details.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Departamento\\Details.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Details.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Departamento\\Details.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:49:51.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Create.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Departamento\\Create.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Create.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Departamento\\Create.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:46:09.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Create.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Puesto\\Create.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Create.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Puesto\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T23:31:43.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Departamento\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Departamento\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Departamento\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:44:31.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Puesto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Puesto\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T23:29:44.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T23:24:15.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-09T23:22:47.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Program.cs",
+              "RelativeDocumentMoniker": "nomina\\Program.cs",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Program.cs",
+              "RelativeToolTip": "nomina\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T22:35:21.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\appsettings.json",
+              "RelativeDocumentMoniker": "nomina\\appsettings.json",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\appsettings.json",
+              "RelativeToolTip": "nomina\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-09T22:35:17.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TipoDeTransaccion.cs",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Entities\\TipoDeTransaccion.cs",
+              "RelativeDocumentMoniker": "nomina\\Entities\\TipoDeTransaccion.cs",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Entities\\TipoDeTransaccion.cs",
+              "RelativeToolTip": "nomina\\Entities\\TipoDeTransaccion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T22:28:43.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\AsientoContable\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\AsientoContable\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\AsientoContable\\Index.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:24:42.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Edit.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\TipoDeTransaccion\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Edit.cshtml",
+              "RelativeToolTip": "nomina\\Views\\TipoDeTransaccion\\Edit.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAwwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:25:13.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Delete.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Empleado\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Delete.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Empleado\\Delete.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwCYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:18:05.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Details.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Empleado\\Details.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Details.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Empleado\\Details.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:17:23.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Edit.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Empleado\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Edit.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Empleado\\Edit.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:16:47.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Create.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Empleado\\Create.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Create.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Empleado\\Create.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:11:13.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Empleado\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Empleado\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Empleado\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:11:10.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Delete.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\TipoDeTransaccion\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Delete.cshtml",
+              "RelativeToolTip": "nomina\\Views\\TipoDeTransaccion\\Delete.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:09:08.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Create.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\TipoDeTransaccion\\Create.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Create.cshtml",
+              "RelativeToolTip": "nomina\\Views\\TipoDeTransaccion\\Create.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:06:23.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Details.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\TipoDeTransaccion\\Details.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Details.cshtml",
+              "RelativeToolTip": "nomina\\Views\\TipoDeTransaccion\\Details.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:05:06.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Index.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\TipoDeTransaccion\\Index.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\TipoDeTransaccion\\Index.cshtml",
+              "RelativeToolTip": "nomina\\Views\\TipoDeTransaccion\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwCIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T01:00:03.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Delete.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Puesto\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Delete.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Puesto\\Delete.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:54:47.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Details.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Puesto\\Details.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Details.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Puesto\\Details.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:53:59.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Edit.cshtml",
+              "RelativeDocumentMoniker": "nomina\\Views\\Puesto\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\penaa\\source\\repos\\nomina\\nomina\\Views\\Puesto\\Edit.cshtml",
+              "RelativeToolTip": "nomina\\Views\\Puesto\\Edit.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-10T00:53:17.476Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

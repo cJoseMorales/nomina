@@ -1,58 +1,57 @@
 @model nomina.Entities.AsientoContable
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar Asiento Contable";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Delete</h1>
+<div class="container mt-4">
+    <h2 class="fw-bold text-danger mb-3">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i> ¿Está seguro que desea eliminar este asiento contable?
+    </h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>AsientoContable</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cuenta)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cuenta)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoDeMovimiento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoDeMovimiento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Periodo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Periodo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Monto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Monto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
+    <div class="card border-danger shadow-sm rounded-4">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">Descripción</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Cuenta</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Cuenta)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Tipo de Movimiento</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.TipoDeMovimiento)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Periodo</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Periodo)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Monto</dt>
+                <dd class="col-sm-9">@String.Format("{0:C}", Model.Monto)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Estado</dt>
+                <dd class="col-sm-9">
+                    @if (Model.Estado?.ToUpper() == "ACTIVO")
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <form asp-action="Delete" class="mt-4">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <div class="d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Cancelar
+            </a>
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash-fill"></i> Eliminar
+            </button>
+        </div>
     </form>
 </div>

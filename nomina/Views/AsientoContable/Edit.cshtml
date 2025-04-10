@@ -1,60 +1,75 @@
 @model nomina.Entities.AsientoContable
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Asiento Contable";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<div class="container mt-4">
+    <h2 class="fw-bold mb-4">
+        <i class="bi bi-pencil-square me-2"></i> Editar Asiento Contable
+    </h2>
 
-<h4>AsientoContable</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Descripcion" class="control-label"></label>
-                <input asp-for="Descripcion" class="form-control" />
-                <span asp-validation-for="Descripcion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cuenta" class="control-label"></label>
-                <input asp-for="Cuenta" class="form-control" />
-                <span asp-validation-for="Cuenta" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TipoDeMovimiento" class="control-label"></label>
-                <input asp-for="TipoDeMovimiento" class="form-control" />
-                <span asp-validation-for="TipoDeMovimiento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Periodo" class="control-label"></label>
-                <input asp-for="Periodo" class="form-control" />
-                <span asp-validation-for="Periodo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Monto" class="control-label"></label>
-                <input asp-for="Monto" class="form-control" />
-                <span asp-validation-for="Monto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="card shadow-sm rounded-4">
+        <div class="card-body">
+            <form asp-action="Edit" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label asp-for="Descripcion" class="form-label fw-semibold">Descripción</label>
+                    <input asp-for="Descripcion" class="form-control" />
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Cuenta" class="form-label fw-semibold">Cuenta</label>
+                    <input asp-for="Cuenta" class="form-control" />
+                    <span asp-validation-for="Cuenta" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TipoDeMovimiento" class="form-label fw-semibold">Tipo de Movimiento</label>
+                    <input asp-for="TipoDeMovimiento" class="form-control" placeholder="Débito / Crédito" />
+                    <span asp-validation-for="TipoDeMovimiento" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Periodo" class="form-label fw-semibold">Periodo</label>
+                    <input asp-for="Periodo" class="form-control" placeholder="Ej: 2024-12" />
+                    <span asp-validation-for="Periodo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Monto" class="form-label fw-semibold">Monto</label>
+                    <input asp-for="Monto" class="form-control" />
+                    <span asp-validation-for="Monto" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Estado" class="form-label fw-semibold">Estado</label>
+                    <select asp-for="Estado" class="form-select">
+                        <option value="ACTIVO" selected="@("ACTIVO" == Model.Estado)">ACTIVO</option>
+                        <option value="INACTIVO" selected="@("INACTIVO" == Model.Estado)">INACTIVO</option>
+                    </select>
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-circle"></i> Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

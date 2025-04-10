@@ -1,43 +1,51 @@
 @model nomina.Entities.TipoDeTransaccion
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar Tipo de Transacción";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>¿Está seguro de eliminar este tipo de transacción?</h3>
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            Operación
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Operacion)
-        </dd>
-        <dt class = "col-sm-2">
-            Depende del Salario
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DependeDeSalario)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
+<div class="container mt-4">
+    <h2 class="fw-bold text-danger mb-3">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i> ¿Está seguro que desea eliminar este tipo de transacción?
+    </h2>
+
+    <div class="card border-danger shadow-sm rounded-4">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">Nombre</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Nombre)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Operación</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Operacion)</dd>
+
+                <dt class="col-sm-3 fw-semibold">Depende del Salario</dt>
+                <dd class="col-sm-9">@((Model.DependeDeSalario) ? "Sí" : "No")</dd>
+
+                <dt class="col-sm-3 fw-semibold">Estado</dt>
+                <dd class="col-sm-9">
+                    @if (Model.Estado == "ACTIVO")
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <form asp-action="Delete" class="mt-4">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="Index">Volver</a>
+        <div class="d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Cancelar
+            </a>
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash-fill"></i> Eliminar
+            </button>
+        </div>
     </form>
 </div>
