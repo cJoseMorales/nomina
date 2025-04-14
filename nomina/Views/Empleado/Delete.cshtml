@@ -26,7 +26,7 @@
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.Puesto!.Nombre)</dd>
 
                 <dt class="col-sm-3 fw-semibold">Salario Mensual</dt>
-                <dd class="col-sm-9">@String.Format("{0:C}", Model.SalarioMensual)</dd>
+                <dd class="col-sm-9">@($"{Model.SalarioMensual:C}")</dd>
             </dl>
         </div>
     </div>

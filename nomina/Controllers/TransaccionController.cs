@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using nomina.Context;
 using nomina.Entities;
@@ -34,6 +35,8 @@ public class TransaccionController(NominaContext context) : Controller
     // GET: Transaccion/Create
     public IActionResult Create()
     {
+        ViewData["Empleados"] = new SelectList(context.Empleado, "Id", "Nombre");
+        ViewData["TiposTransaccion"] = new SelectList(context.TipoDeTransaccion, "Id", "Nombre");
         return View();
     }
 
@@ -50,6 +53,9 @@ public class TransaccionController(NominaContext context) : Controller
             await context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        ViewData["Empleados"] = new SelectList(context.Empleado, "Id", "Nombre");
+        ViewData["TiposTransaccion"] = new SelectList(context.TipoDeTransaccion, "Id", "Nombre");
         return View(transaccion);
     }
 
@@ -66,6 +72,7 @@ public class TransaccionController(NominaContext context) : Controller
         {
             return NotFound();
         }
+
         return View(transaccion);
     }
 
@@ -99,8 +106,10 @@ public class TransaccionController(NominaContext context) : Controller
                     throw;
                 }
             }
+
             return RedirectToAction(nameof(Index));
         }
+
         return View(transaccion);
     }
 

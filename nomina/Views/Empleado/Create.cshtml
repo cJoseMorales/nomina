@@ -17,31 +17,35 @@
 
                 <div class="mb-3">
                     <label asp-for="Cedula" class="form-label fw-semibold">Cédula</label>
-                    <input asp-for="Cedula" class="form-control" placeholder="Ej: 001-0000000-0" />
+                    <input asp-for="Cedula" class="form-control" placeholder="Ej: 001-0000000-0"/>
                     <span asp-validation-for="Cedula" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Nombre" class="form-label fw-semibold">Nombre</label>
-                    <input asp-for="Nombre" class="form-control" placeholder="Nombre completo del empleado" />
+                    <input asp-for="Nombre" class="form-control" placeholder="Nombre completo del empleado"/>
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="DepartamentoId" class="form-label fw-semibold">Departamento</label>
-                    <select asp-for="DepartamentoId" class="form-select" asp-items="ViewBag.Departamentos"></select>
+                    <select asp-for="DepartamentoId" class="form-select" asp-items="ViewBag.Departamentos">
+                        <option value="">Seleccione una opción</option>
+                    </select>
                     <span asp-validation-for="DepartamentoId" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="PuestoId" class="form-label fw-semibold">Puesto</label>
-                    <select asp-for="PuestoId" class="form-select" asp-items="ViewBag.Puestos"></select>
+                    <select asp-for="PuestoId" class="form-select" asp-items="ViewBag.Puestos">
+                        <option value="">Seleccione una opción</option>
+                    </select>
                     <span asp-validation-for="PuestoId" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="SalarioMensual" class="form-label fw-semibold">Salario Mensual</label>
-                    <input asp-for="SalarioMensual" class="form-control" placeholder="Ej: 35000.00" />
+                    <input asp-for="SalarioMensual" class="form-control" placeholder="Ej: 35000.00"/>
                     <span asp-validation-for="SalarioMensual" class="text-danger"></span>
                 </div>
 

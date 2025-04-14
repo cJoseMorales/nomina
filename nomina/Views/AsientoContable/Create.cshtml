@@ -16,39 +16,41 @@
                 <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
                 <div class="mb-3">
-                    <label asp-for="Descripcion" class="form-label fw-semibold">Descripción</label>
-                    <input asp-for="Descripcion" class="form-control" placeholder="Ej: Pago de nómina mensual" />
+                    <label asp-for="Descripcion" class="form-label fw-semibold">Descripciï¿½n</label>
+                    <input asp-for="Descripcion" class="form-control" placeholder="Ej: Pago de nï¿½mina mensual"/>
                     <span asp-validation-for="Descripcion" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Cuenta" class="form-label fw-semibold">Cuenta</label>
-                    <input asp-for="Cuenta" class="form-control" placeholder="Ej: 1101 - Banco Nacional" />
+                    <input asp-for="Cuenta" class="form-control" placeholder="Ej: 1101 - Banco Nacional"/>
                     <span asp-validation-for="Cuenta" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="TipoDeMovimiento" class="form-label fw-semibold">Tipo de Movimiento</label>
-                    <input asp-for="TipoDeMovimiento" class="form-control" placeholder="Débito / Crédito" />
+                    <select asp-for="TipoDeMovimiento" class="form-select">
+                        <option value="DEBITO">DÃ‰BITO</option>
+                        <option value="CREDITO">CRÃ‰DITO</option>
+                    </select>
                     <span asp-validation-for="TipoDeMovimiento" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Periodo" class="form-label fw-semibold">Periodo</label>
-                    <input asp-for="Periodo" class="form-control" placeholder="Ej: 2024-12" />
+                    <input asp-for="Periodo" class="form-control" placeholder="Ej: 2024-12"/>
                     <span asp-validation-for="Periodo" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Monto" class="form-label fw-semibold">Monto</label>
-                    <input asp-for="Monto" class="form-control" placeholder="Ej: 12500.00" />
+                    <input asp-for="Monto" class="form-control" placeholder="Ej: 12500.00"/>
                     <span asp-validation-for="Monto" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Estado" class="form-label fw-semibold">Estado</label>
                     <select asp-for="Estado" class="form-select">
-                        <option value="">-- Selecciona un estado --</option>
                         <option value="ACTIVO">ACTIVO</option>
                         <option value="INACTIVO">INACTIVO</option>
                     </select>

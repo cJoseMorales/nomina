@@ -17,13 +17,14 @@
 
                 <div class="mb-3">
                     <label asp-for="Nombre" class="form-label fw-semibold">Nombre</label>
-                    <input asp-for="Nombre" class="form-control" placeholder="Nombre del tipo de transacción" />
+                    <input asp-for="Nombre" class="form-control" placeholder="Nombre del tipo de transacción"/>
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Operacion" class="form-label fw-semibold">Operación</label>
                     <select asp-for="Operacion" class="form-select">
+                        <option value="">Seleccione una opción</option>
                         <option value="INGRESO">INGRESO</option>
                         <option value="DEDUCCION">DEDUCCIÓN</option>
                     </select>
@@ -31,7 +32,7 @@
                 </div>
 
                 <div class="mb-3 form-check">
-                    <input class="form-check-input" asp-for="DependeDeSalario" />
+                    <input class="form-check-input" asp-for="DependeDeSalario"/>
                     <label class="form-check-label fw-semibold" asp-for="DependeDeSalario">
                         Depende del Salario
                     </label>

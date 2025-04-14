@@ -26,7 +26,7 @@
                 <div class="mb-3">
                     <label asp-for="Tipo" class="form-label">Tipo de Transacción</label>
                     <select asp-for="Tipo" class="form-select" asp-items="ViewBag.TiposTransaccion">
-                        <option value="">Seleccione un tipo</option>
+                        <option value="">Seleccione una opción</option>
                     </select>
                     <span asp-validation-for="Tipo" class="text-danger"></span>
                 </div>
@@ -34,14 +34,14 @@
                 <!-- Fecha -->
                 <div class="mb-3">
                     <label asp-for="Fecha" class="form-label">Fecha</label>
-                    <input asp-for="Fecha" type="date" class="form-control" />
+                    <input asp-for="Fecha" type="date" class="form-control"/>
                     <span asp-validation-for="Fecha" class="text-danger"></span>
                 </div>
 
                 <!-- Monto -->
                 <div class="mb-3">
                     <label asp-for="Monto" class="form-label">Monto</label>
-                    <input asp-for="Monto" class="form-control" />
+                    <input asp-for="Monto" class="form-control"/>
                     <span asp-validation-for="Monto" class="text-danger"></span>
                 </div>
 

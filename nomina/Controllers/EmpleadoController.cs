@@ -52,10 +52,16 @@ public class EmpleadoController(NominaContext context) : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Cedula,Nombre,DepartamentoId,PuestoId,SalarioMensual")] Empleado empleado)
     {
-       
+        if (ModelState.IsValid)
+        {
             context.Add(empleado);
             await context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        
+        ViewData["Puestos"] = new SelectList(context.Puesto, "Id", "Nombre");
+        ViewData["Departamentos"] = new SelectList(context.Departamento, "Id", "Nombre");
+        return View(empleado);
     }
 
     // GET: Empleado/Edit/5
@@ -121,6 +127,8 @@ public class EmpleadoController(NominaContext context) : Controller
         }
 
         var empleado = await context.Empleado
+            .Include(m => m.Departamento)
+            .Include(m => m.Puesto)
             .FirstOrDefaultAsync(m => m.Id == id);
         if (empleado == null)
         {
