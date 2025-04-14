@@ -211,52 +211,6 @@ public class AsientoContableController : Controller
         ), []);
     }
 
-    public async Task<IActionResult> SendCurrentPeriodToAccounting()
-    {
-        var now = DateTime.Now;
-
-        var year = now.Year;
-        var month = now.Month;
-
-        var transaccionesDelPeriodo = _context.Transaccion
-            .Where(t => t.IdAsiento == null && t.Fecha.Year == year && t.Fecha.Month == month)
-            .ToList();
-        if (transaccionesDelPeriodo.Count == 0)
-        {
-            return BadRequest("No se han encontrado transacciones en el período actual.");
-        }
-
-        var total = transaccionesDelPeriodo.Sum(t => t.Monto);
-        var data = new
-        {
-            descripcion = "Asiento de Nominas correspondiente al periodo " + now.ToString("yyyy-MM"),
-            sistemaAuxiliarId = AuxiliarId,
-            fechaAsiento = new DateTime(year, month, 1),
-            detalles = new List<object>
-            {
-                new
-                {
-                    cuentaId = CrAccountId,
-                    montoAsiento = total,
-                    tipoMovimiento = "CR"
-                },
-                new
-                {
-                    cuentaId = DbAccountId,
-                    montoAsiento = total,
-                    tipoMovimiento = "DB"
-                }
-            }
-        };
-
-        var json = JsonSerializer.Serialize(
-            data,
-            JsonOptions
-        );
-
-        return await SendDataToAccounting(json, transaccionesDelPeriodo);
-    }
-
     private async Task<IActionResult> SendDataToAccounting(string json, List<Transaccion> transacciones)
     {
         Console.WriteLine(json);
@@ -381,41 +335,6 @@ public class AsientoContableController : Controller
             data,
             JsonOptions
         ));
-    }
-
-    public async Task<IActionResult> SendCurrentPeriodToAccounting2()
-    {
-        var (year, month, _) = DateTime.Now;
-
-        var total = await CalculateTotal();
-        var data = new
-        {
-            descripcion = string.Format(DescriptionFormat, year + "-" + month),
-            sistemaAuxiliarId = AuxiliarId,
-            fechaAsiento = new DateTime(year, month, 1),
-            detalles = new List<object>
-            {
-                new
-                {
-                    cuentaId = CrAccountId,
-                    montoAsiento = total,
-                    tipoMovimiento = "CR"
-                },
-                new
-                {
-                    cuentaId = DbAccountId,
-                    montoAsiento = total,
-                    tipoMovimiento = "DB"
-                }
-            }
-        };
-
-        var json = JsonSerializer.Serialize(
-            data,
-            JsonOptions
-        );
-
-        return await SendDataToAccounting2(json);
     }
 
     private async Task<double> CalculateTotal()
