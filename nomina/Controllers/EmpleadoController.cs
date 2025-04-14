@@ -118,7 +118,6 @@ public class EmpleadoController(NominaContext context) : Controller
         
         ViewData["Puestos"] = new SelectList(context.Puesto, "Id", "Nombre");
         ViewData["Departamentos"] = new SelectList(context.Departamento, "Id", "Nombre");
-        
         return View(empleado);
     }
 

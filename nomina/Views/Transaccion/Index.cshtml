@@ -33,7 +33,7 @@
                     <td>@Html.DisplayFor(modelItem => item.Empleado!.Nombre)</td>
                     <td>@Html.DisplayFor(modelItem => item.TipoDeTransaccion!.Nombre)</td>
                     <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Monto)</td>
+                    <td>@($"{item.Monto:C}")</td>
                     <td>@(item.IdAsiento == null ? "No definido" : item.IdAsiento)</td>
                     <td>@Html.DisplayFor(modelItem => item.Estado)</td>
                     <td class="text-center">

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using nomina.Attributes;
 
 namespace nomina.Entities;
 
@@ -14,10 +15,9 @@ public class AsientoContable
     public string? Descripcion { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio.", AllowEmptyStrings = false)]
-    [Column("periodo")] [StringLength(7)] public string Periodo { get; set; } = null!;
+    [Column("periodo")] [StringLength(7)] [DatePeriod] public string Periodo { get; set; } = null!;
 
-    [Required(ErrorMessage = "Este campo es obligatorio.")]
-    [Column("monto")] [Precision(10)] public decimal Monto { get; set; }
+    [Column("monto")] [Precision(10)] public decimal? Monto { get; set; }
 
     [Required(ErrorMessage = "Este campo es obligatorio.")]
     [Column("estado", TypeName = "enum('ACTIVO','INACTIVO')")]

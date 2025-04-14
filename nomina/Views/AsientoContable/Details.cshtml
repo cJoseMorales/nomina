@@ -12,55 +12,25 @@
 
     <div class="card shadow-sm rounded-4">
         <div class="card-body">
-            <form asp-action="Edit" novalidate>
-                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
-                <input type="hidden" asp-for="Id"/>
+            <dl class="row">
+                <dt class="col-sm-3 fw-semibold">Descripción</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
 
-                <div class="mb-3">
-                    <label asp-for="Descripcion" class="form-label fw-semibold">Descripción</label>
-                    <input asp-for="Descripcion" class="form-control"/>
-                    <span asp-validation-for="Descripcion" class="text-danger"></span>
-                </div>
+                <dt class="col-sm-3 fw-semibold">Período</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Periodo)</dd>
 
-                @*<div class="mb-3">
-                    <label asp-for="Periodo" class="form-label fw-semibold">Período</label>
-                    <select asp-for="Periodo" class="form-select">
-                        <option value="INGRESO" selected="@("INGRESO" == Model.Operacion)">INGRESO</option>
-                        <option value="DEDUCCION" selected="@("DEDUCCION" == Model.Operacion)">DEDUCCIÓN</option>
-                    </select>
-                    <span asp-validation-for="Operacion" class="text-danger"></span>
-                </div>*@
+                <dt class="col-sm-3 fw-semibold">Monto</dt>
+                <dd class="col-sm-9">@($"{Model.Monto:C}")</dd>
 
-                <div class="form-check mb-3">
-                    <label asp-for="Monto" class="form-label">Monto</label>
-                    <input asp-for="Monto" class="form-control"/>
-                    <span asp-validation-for="Monto" class="text-danger"></span>
-                </div>
-
-                <div class="mb-3">
-                    <label asp-for="Estado" class="form-label fw-semibold">Estado</label>
-                    <select asp-for="Estado" class="form-select">
-                        <option value="ACTIVO" selected="@("ACTIVO" == Model.Estado)">ACTIVO</option>
-                        <option value="INACTIVO" selected="@("INACTIVO" == Model.Estado)">INACTIVO</option>
-                    </select>
-                    <span asp-validation-for="Estado" class="text-danger"></span>
-                </div>
-
-                <div class="d-flex justify-content-between">
-                    <a asp-action="Index" class="btn btn-outline-secondary">
-                        <i class="bi bi-arrow-left"></i> Volver
-                    </a>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-check-circle"></i> Guardar
-                    </button>
-                </div>
-            </form>
+                <dt class="col-sm-3 fw-semibold">Estado</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Estado)</dd>
+            </dl>
         </div>
     </div>
-</div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>

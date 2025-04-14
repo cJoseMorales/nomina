@@ -50,7 +50,7 @@ public class TransaccionController(NominaContext context) : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,Empleado,Tipo,Fecha,Monto,Estado")] Transaccion transaccion)
+    public async Task<IActionResult> Create([Bind("Id,EmpleadoId,TipoDeTransaccionId,Fecha,Monto,Estado")] Transaccion transaccion)
     {
         if (ModelState.IsValid)
         {
@@ -89,7 +89,7 @@ public class TransaccionController(NominaContext context) : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Empleado,Tipo,Fecha,Monto,Estado")] Transaccion transaccion)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,EmpleadoId,TipoDeTransaccionId,Fecha,Monto,Estado")] Transaccion transaccion)
     {
         if (id != transaccion.Id)
         {
