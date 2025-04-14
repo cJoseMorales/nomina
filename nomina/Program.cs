@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using nomina.Context;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient();
 
 // Add services to the container.
 // Add services to the container.

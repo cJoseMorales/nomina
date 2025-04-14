@@ -7,30 +7,24 @@
 
 <div class="container mt-4">
     <h2 class="fw-bold text-danger mb-3">
-        <i class="bi bi-exclamation-triangle-fill me-2"></i> ¿Está seguro que desea eliminar este asiento contable?
+        <i class="bi bi-exclamation-triangle-fill me-2"></i> Â¿EstÃ¡ seguro de que desea eliminar este asiento contable?
     </h2>
 
     <div class="card border-danger shadow-sm rounded-4">
         <div class="card-body">
             <dl class="row">
-                <dt class="col-sm-3 fw-semibold">Descripción</dt>
+                <dt class="col-sm-3 fw-semibold">DescripciÃ³n</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.Descripcion)</dd>
 
-                <dt class="col-sm-3 fw-semibold">Cuenta</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.Cuenta)</dd>
-
-                <dt class="col-sm-3 fw-semibold">Tipo de Movimiento</dt>
-                <dd class="col-sm-9">@Html.DisplayFor(model => model.TipoDeMovimiento)</dd>
-
-                <dt class="col-sm-3 fw-semibold">Periodo</dt>
+                <dt class="col-sm-3 fw-semibold">PerÃ­odo</dt>
                 <dd class="col-sm-9">@Html.DisplayFor(model => model.Periodo)</dd>
 
                 <dt class="col-sm-3 fw-semibold">Monto</dt>
-                <dd class="col-sm-9">@String.Format("{0:C}", Model.Monto)</dd>
+                <dd class="col-sm-9">@($"{Model.Monto:C}")</dd>
 
                 <dt class="col-sm-3 fw-semibold">Estado</dt>
                 <dd class="col-sm-9">
-                    @if (Model.Estado?.ToUpper() == "ACTIVO")
+                    @if (Model.Estado.ToUpper() == "ACTIVO")
                     {
                         <span class="badge bg-success">Activo</span>
                     }
@@ -44,7 +38,7 @@
     </div>
 
     <form asp-action="Delete" class="mt-4">
-        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Id"/>
         <div class="d-flex justify-content-between">
             <a asp-action="Index" class="btn btn-outline-secondary">
                 <i class="bi bi-arrow-left"></i> Cancelar

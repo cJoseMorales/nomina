@@ -49,11 +49,9 @@ create table transaccion
 
 create table asiento_contable
 (
-    id                 int primary key auto_increment,
-    descripcion        text,
-    cuenta             varchar(36)       not null,
-    tipo_de_movimiento enum('DEBITO', 'CREDITO') not null,
-    periodo            varchar(7) unique not null, -- 2025-01 ####-##
-    monto              decimal(10, 2)    not null check (monto > -1),
-    estado             enum('ACTIVO', 'INACTIVO') not null
+    id          int primary key auto_increment,
+    descripcion text,
+    periodo     varchar(7) unique not null, -- 2025-01 ####-##
+    monto       decimal(10, 2)    not null check (monto > -1),
+    estado      enum('ACTIVO', 'INACTIVO') not null
 );
