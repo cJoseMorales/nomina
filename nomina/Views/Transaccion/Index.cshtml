@@ -16,38 +16,40 @@
     <div class="table-responsive shadow-sm rounded-3">
         <table class="table table-hover align-middle">
             <thead class="table-light">
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.First().Empleado)</th>
-                    <th>@Html.DisplayNameFor(model => model.First().Tipo)</th>
-                    <th>@Html.DisplayNameFor(model => model.First().Fecha)</th>
-                    <th>@Html.DisplayNameFor(model => model.First().Monto)</th>
-                    <th>@Html.DisplayNameFor(model => model.First().Estado)</th>
-                    <th class="text-center">Acciones</th>
-                </tr>
+            <tr>
+                <th>Empleado</th>
+                <th>Tipo de Transacci√≥n</th>
+                <th>@Html.DisplayNameFor(model => model.First().Fecha)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Monto)</th>
+                <th>Asiento</th>
+                <th>@Html.DisplayNameFor(model => model.First().Estado)</th>
+                <th class="text-center">Acciones</th>
+            </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Empleado)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Monto)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Estado)</td>
-                        <td class="text-center">
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning me-1">
-                                <i class="bi bi-pencil-square"></i> Editar
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info me-1">
-                                <i class="bi bi-info-circle"></i> Detalles
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger"
-                               onclick="return confirm('øEst·s seguro de que deseas eliminar esta transacciÛn?');">
-                                <i class="bi bi-trash"></i> Eliminar
-                            </a>
-                        </td>
-                    </tr>
-                }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Empleado!.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TipoDeTransaccion!.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Monto)</td>
+                    <td>@(item.IdAsiento == null ? "No definido" : item.IdAsiento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Estado)</td>
+                    <td class="text-center">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning me-1">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info me-1">
+                            <i class="bi bi-info-circle"></i> Detalles
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger"
+                           onclick="return confirm('¬øEst√°s seguro de que deseas eliminar esta transacci√≥n?');">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+            }
             </tbody>
         </table>
     </div>

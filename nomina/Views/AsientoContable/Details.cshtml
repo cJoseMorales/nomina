@@ -1,7 +1,7 @@
 @model nomina.Entities.AsientoContable
 
 @{
-    ViewData["Title"] = "Editar Tipo de Transacci�n";
+    ViewData["Title"] = "Editar Tipo de Transacción";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -26,7 +26,7 @@
                     <label asp-for="Periodo" class="form-label fw-semibold">Período</label>
                     <select asp-for="Periodo" class="form-select">
                         <option value="INGRESO" selected="@("INGRESO" == Model.Operacion)">INGRESO</option>
-                        <option value="DEDUCCION" selected="@("DEDUCCION" == Model.Operacion)">DEDUCCI�N</option>
+                        <option value="DEDUCCION" selected="@("DEDUCCION" == Model.Operacion)">DEDUCCIÓN</option>
                     </select>
                     <span asp-validation-for="Operacion" class="text-danger"></span>
                 </div>*@

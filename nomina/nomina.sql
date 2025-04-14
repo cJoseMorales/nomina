@@ -39,12 +39,13 @@ create table tipo_de_transaccion
 
 create table transaccion
 (
-    id       int primary key auto_increment,
-    empleado int                     not null references empleado (id) on delete cascade on update cascade,
-    tipo     int                     not null references tipo_de_transaccion (id) on delete cascade on update cascade,
-    fecha    timestamp default now() not null,
-    monto    decimal(10, 2)          not null check (monto > -1),
-    estado   enum('ACTIVO', 'INACTIVO') not null
+    id         int primary key auto_increment,
+    empleado   int                     not null references empleado (id) on delete cascade on update cascade,
+    tipo       int                     not null references tipo_de_transaccion (id) on delete cascade on update cascade,
+    fecha      timestamp default now() not null,
+    monto      decimal(10, 2)          not null check (monto > -1),
+    id_asiento int,
+    estado     enum('ACTIVO', 'INACTIVO') not null
 );
 
 create table asiento_contable

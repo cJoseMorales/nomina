@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using nomina.Attributes;
 
 namespace nomina.Entities;
 
@@ -13,7 +14,6 @@ public class Empleado
     [Required(ErrorMessage = "Este campo es obligatorio.", AllowEmptyStrings = false)]
     [DominicanIdCard]
     [Column("cedula")]
-    [StringLength(11)]
     public string Cedula { get; set; } = null!;
 
     [Required(ErrorMessage = "Este campo es obligatorio.", AllowEmptyStrings = false)]

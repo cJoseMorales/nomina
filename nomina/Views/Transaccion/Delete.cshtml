@@ -12,17 +12,17 @@
         <div class="card-body">
             <dl class="row">
                 <dt class="col-sm-3 fw-semibold text-muted">
-                    @Html.DisplayNameFor(model => model.Empleado)
+                    Empleado
                 </dt>
                 <dd class="col-sm-9">
-                    @Html.DisplayFor(model => model.Empleado)
+                    @Html.DisplayFor(model => model.Empleado!.Nombre)
                 </dd>
 
                 <dt class="col-sm-3 fw-semibold text-muted">
-                    @Html.DisplayNameFor(model => model.Tipo)
+                    Tipo de Transacción
                 </dt>
                 <dd class="col-sm-9">
-                    @Html.DisplayFor(model => model.Tipo)
+                    @Html.DisplayFor(model => model.TipoDeTransaccion!.Nombre)
                 </dd>
 
                 <dt class="col-sm-3 fw-semibold text-muted">

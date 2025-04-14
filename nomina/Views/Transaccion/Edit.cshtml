@@ -14,15 +14,19 @@
             <input type="hidden" asp-for="Id" />
 
             <div class="mb-3">
-                <label asp-for="Empleado" class="form-label"></label>
-                <input asp-for="Empleado" class="form-control" />
-                <span asp-validation-for="Empleado" class="text-danger"></span>
+                <label asp-for="EmpleadoId" class="form-label">Empleado</label>
+                <select asp-for="EmpleadoId" class="form-select" asp-items="ViewBag.Empleados">
+                    <option value="">Seleccione un empleado</option>
+                </select>
+                <span asp-validation-for="EmpleadoId" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
-                <label asp-for="Tipo" class="form-label"></label>
-                <input asp-for="Tipo" class="form-control" />
-                <span asp-validation-for="Tipo" class="text-danger"></span>
+                <label asp-for="TipoDeTransaccionId" class="form-label">Tipo de Transacción</label>
+                <select asp-for="TipoDeTransaccionId" class="form-select" asp-items="ViewBag.TiposTransaccion">
+                    <option value="">Seleccione una opción</option>
+                </select>
+                <span asp-validation-for="TipoDeTransaccionId" class="text-danger"></span>
             </div>
 
             <div class="mb-3">

@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
@@ -7,16 +8,25 @@ using nomina.Entities;
 
 namespace nomina.Controllers;
 
-public class AsientoContableController(NominaContext context, HttpClient client) : Controller
+public class AsientoContableController : Controller
 {
-    private static readonly string ApiKey = "";
+    private const int AuxiliarId = 2;
 
-    private static readonly int AuxiliarId = 2;
-
-    private static readonly int CrAccountId = 70;
-    private static readonly int DbAccountId = 71;
+    private const int CrAccountId = 70;
+    private const int DbAccountId = 71;
 
     private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
+
+    private readonly NominaContext context;
+    private readonly HttpClient client;
+
+    public AsientoContableController(NominaContext context, HttpClient client)
+    {
+        this.context = context;
+        this.client = client;
+
+        this.client.BaseAddress = new Uri("https://iso810-contabilidad.azurewebsites.net");
+    }
 
     // GET: AsientoContable
     public async Task<IActionResult> Index()
@@ -144,27 +154,40 @@ public class AsientoContableController(NominaContext context, HttpClient client)
             return NotFound();
         }
 
+        var parts = asientoContable.Periodo.Split("-");
+        var year = int.Parse(parts[0]);
+        var month = int.Parse(parts[1]);
+
         var total = asientoContable.Monto;
         var data = new
         {
-            descripcion = "Asiento de Nominas correspondiente al periodo " + asientoContable.Periodo,
-            id_auxiliar = AuxiliarId,
-            cuenta_cr = new
+            dto = new
             {
-                cuenta_id = CrAccountId,
-                monto = total
-            },
-            cuenta_db = new
-            {
-                cuenta_id = DbAccountId,
-                monto = total
+                descripcion = "Asiento de Nominas correspondiente al periodo " + asientoContable.Periodo,
+                sistemaAuxiliarId = AuxiliarId,
+                fechaAsiento = new DateOnly(year, month, 1),
+                detalles = new List<object>
+                {
+                    new
+                    {
+                        cuentaId = CrAccountId,
+                        montoAsiento = total,
+                        tipoMovimiento = "CR"
+                    },
+                    new
+                    {
+                        cuentaId = DbAccountId,
+                        montoAsiento = total,
+                        tipoMovimiento = "DB"
+                    }
+                }
             }
         };
 
         return await SendDataToAccounting(JsonSerializer.Serialize(
             data,
             JsonOptions
-        ));
+        ), []);
     }
 
     public async Task<IActionResult> SendCurrentPeriodToAccounting()
@@ -175,27 +198,36 @@ public class AsientoContableController(NominaContext context, HttpClient client)
         var month = now.Month;
 
         var transaccionesDelPeriodo = context.Transaccion
-            .Where(t => t.Fecha.Year == year && t.Fecha.Month == month)
+            .Where(t => t.IdAsiento == null && t.Fecha.Year == year && t.Fecha.Month == month)
             .ToList();
         if (transaccionesDelPeriodo.Count == 0)
         {
-            return NotFound();
+            return BadRequest("No se han encontrado transacciones en el período actual.");
         }
 
         var total = transaccionesDelPeriodo.Sum(t => t.Monto);
         var data = new
         {
-            descripcion = "Asiento de Nominas correspondiente al periodo " + now.ToString("yyyy-MM"),
-            id_auxiliar = AuxiliarId,
-            cuenta_cr = new
+            dto = new
             {
-                cuenta_id = CrAccountId,
-                monto = total
-            },
-            cuenta_db = new
-            {
-                cuenta_id = DbAccountId,
-                monto = total
+                descripcion = "Asiento de Nominas correspondiente al periodo " + now.ToString("yyyy-MM"),
+                sistemaAuxiliarId = AuxiliarId,
+                fechaAsiento = new DateTime(year, month, 1),
+                detalles = new List<object>
+                {
+                    new
+                    {
+                        cuentaId = CrAccountId,
+                        montoAsiento = total,
+                        tipoMovimiento = "CR"
+                    },
+                    new
+                    {
+                        cuentaId = DbAccountId,
+                        montoAsiento = total,
+                        tipoMovimiento = "DB"
+                    }
+                }
             }
         };
 
@@ -204,18 +236,36 @@ public class AsientoContableController(NominaContext context, HttpClient client)
             JsonOptions
         );
 
-        return await SendDataToAccounting(json);
+        return await SendDataToAccounting(json, transaccionesDelPeriodo);
     }
 
-    private async Task<IActionResult> SendDataToAccounting(string json)
+    private async Task<IActionResult> SendDataToAccounting(string json, List<Transaccion> transacciones)
     {
         Console.WriteLine(json);
 
         HttpResponseMessage? response;
         try
         {
+            /*if (HttpContext.Request.Headers.ContainsKey("Authorization"))
+            {
+                var token = HttpContext.Request.Headers.Authorization.ToString().Replace("Bearer ", "");
+
+                if (string.IsNullOrEmpty(token))
+                {
+                    throw new Exception("Token de autenticación no válido o vacío.");
+                }
+
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+            else
+            {
+                return BadRequest("No se ha encontrado el token de autenticación.");
+            }*/
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "el pepe");
+
             response = await client.PostAsync(
-                ApiKey,
+                "api/EntradaContable",
                 new StringContent(
                     json,
                     Encoding.UTF8,
@@ -225,17 +275,29 @@ public class AsientoContableController(NominaContext context, HttpClient client)
         }
         catch (Exception e)
         {
-            Console.WriteLine("Ha ocurrido un error al enviar los datos a '" + ApiKey + "'. " + e);
-            return NotFound();
+            return BadRequest("Ha ocurrido un error al enviar los datos al departamento de contabilidad. " + e);
         }
 
         if (response is not { IsSuccessStatusCode: true })
         {
-            Console.Write("Ha ocurrido un error enviando los datos de la nómina al departamento de contabilidad.");
-            return NotFound();
+            return BadRequest("Ha ocurrido un error enviando los datos de la nómina al departamento de contabilidad. " +
+                              await response.Content.ReadAsStringAsync());
         }
 
-        Console.WriteLine("Enviado satisfactoriamente.");
+        var result = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("result " + result);
+
+        // todo: extract IdAsiento from response
+        if (transacciones.Count != 0)
+        {
+            foreach (var t in transacciones)
+            {
+                t.IdAsiento = int.Parse(result);
+                context.Transaccion.Update(t);
+            }
+
+            await context.SaveChangesAsync();
+        }
 
         return RedirectToAction(nameof(Index));
     }

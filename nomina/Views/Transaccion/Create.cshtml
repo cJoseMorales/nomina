@@ -15,20 +15,20 @@
 
                 <!-- Empleado -->
                 <div class="mb-3">
-                    <label asp-for="Empleado" class="form-label">Empleado</label>
-                    <select asp-for="Empleado" class="form-select" asp-items="ViewBag.Empleados">
+                    <label asp-for="EmpleadoId" class="form-label">Empleado</label>
+                    <select asp-for="EmpleadoId" class="form-select" asp-items="ViewBag.Empleados">
                         <option value="">Seleccione un empleado</option>
                     </select>
-                    <span asp-validation-for="Empleado" class="text-danger"></span>
+                    <span asp-validation-for="EmpleadoId" class="text-danger"></span>
                 </div>
 
                 <!-- Tipo de Transacción -->
                 <div class="mb-3">
-                    <label asp-for="Tipo" class="form-label">Tipo de Transacción</label>
-                    <select asp-for="Tipo" class="form-select" asp-items="ViewBag.TiposTransaccion">
+                    <label asp-for="TipoDeTransaccionId" class="form-label">Tipo de Transacción</label>
+                    <select asp-for="TipoDeTransaccionId" class="form-select" asp-items="ViewBag.TiposTransaccion">
                         <option value="">Seleccione una opción</option>
                     </select>
-                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                    <span asp-validation-for="TipoDeTransaccionId" class="text-danger"></span>
                 </div>
 
                 <!-- Fecha -->

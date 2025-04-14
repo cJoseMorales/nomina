@@ -11,7 +11,10 @@ public class TransaccionController(NominaContext context) : Controller
     // GET: Transaccion
     public async Task<IActionResult> Index()
     {
-        return View(await context.Transaccion.ToListAsync());
+        return View(await context.Transaccion
+            .Include(m => m.Empleado)
+            .Include(m => m.TipoDeTransaccion)
+            .ToListAsync());
     }
 
     // GET: Transaccion/Details/5
@@ -23,6 +26,8 @@ public class TransaccionController(NominaContext context) : Controller
         }
 
         var transaccion = await context.Transaccion
+            .Include(m => m.Empleado)
+            .Include(m => m.TipoDeTransaccion)
             .FirstOrDefaultAsync(m => m.Id == id);
         if (transaccion == null)
         {
@@ -67,12 +72,15 @@ public class TransaccionController(NominaContext context) : Controller
             return NotFound();
         }
 
-        var transaccion = await context.Transaccion.FindAsync(id);
+        var transaccion = await context.Transaccion
+            .FindAsync(id);
         if (transaccion == null)
         {
             return NotFound();
         }
 
+        ViewData["Empleados"] = new SelectList(context.Empleado, "Id", "Nombre");
+        ViewData["TiposTransaccion"] = new SelectList(context.TipoDeTransaccion, "Id", "Nombre");
         return View(transaccion);
     }
 
@@ -101,15 +109,15 @@ public class TransaccionController(NominaContext context) : Controller
                 {
                     return NotFound();
                 }
-                else
-                {
-                    throw;
-                }
+
+                throw;
             }
 
             return RedirectToAction(nameof(Index));
         }
 
+        ViewData["Empleados"] = new SelectList(context.Empleado, "Id", "Nombre");
+        ViewData["TiposTransaccion"] = new SelectList(context.TipoDeTransaccion, "Id", "Nombre");
         return View(transaccion);
     }
 
@@ -122,6 +130,8 @@ public class TransaccionController(NominaContext context) : Controller
         }
 
         var transaccion = await context.Transaccion
+            .Include(m => m.Empleado)
+            .Include(m => m.TipoDeTransaccion)
             .FirstOrDefaultAsync(m => m.Id == id);
         if (transaccion == null)
         {
