@@ -6,6 +6,14 @@
 }
 
 <div class="container mt-4">
+    @if (TempData["Notification"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Notification"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    }
+    
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="fw-bold">Asientos Contables</h2>
         <a asp-action="Create" class="btn btn-success">

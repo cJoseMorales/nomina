@@ -16,10 +16,6 @@ public class TransaccionController(NominaContext context) : Controller
         DateTime? until
     )
     {
-        Console.WriteLine("filter " + filter?.ToLower().Trim());
-        Console.WriteLine("sorting " + sorting);
-        Console.WriteLine("since " + since);
-        Console.WriteLine("until " + until);
         var transacciones = await context.Transaccion
             .Include(t => t.Empleado)
             .Include(t => t.TipoDeTransaccion)
