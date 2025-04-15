@@ -13,6 +13,34 @@
         </a>
     </div>
 
+    <form asp-action="Index" class="row g-3 mb-4">
+        <div class="col-md-3">
+            <label for="filter" class="form-label">Buscar</label>
+            <input type="text" class="form-control" id="filter" name="filter" value="@ViewData["filter"]" />
+        </div>
+        <div class="col-md-3">
+            <label for="sorting" class="form-label">Buscar por</label>
+            <select class="form-select" id="sorting" name="sorting">
+                <option value="TIPO_DE_TRANSACCION" selected="@("TIPO_DE_TRANSACCION".Equals(ViewData["sorting"]))">Tipo de transacción</option>
+                <option value="EMPLEADO" selected="@("EMPLEADO".Equals(ViewData["sorting"]))">Empleado</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="since" class="form-label">Desde</label>
+            <input type="date" class="form-control" id="since" name="since" value="@((ViewData["since"] as DateTime?)?.ToString("yyyy-MM-dd"))" />
+        </div>
+        <div class="col-md-3">
+            <label for="until" class="form-label">Hasta</label>
+            <input type="date" class="form-control" id="until" name="until" value="@((ViewData["until"] as DateTime?)?.ToString("yyyy-MM-dd"))" />
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-search"></i> Filtrar
+            </button>
+        </div>
+    </form>
+
+    <!-- Table -->
     <div class="table-responsive shadow-sm rounded-3">
         <table class="table table-hover align-middle">
             <thead class="table-light">

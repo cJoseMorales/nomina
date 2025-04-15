@@ -9,12 +9,57 @@ namespace nomina.Controllers;
 public class TransaccionController(NominaContext context) : Controller
 {
     // GET: Transaccion
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(
+        string? filter,
+        string? sorting,
+        DateTime? since,
+        DateTime? until
+    )
     {
-        return View(await context.Transaccion
-            .Include(m => m.Empleado)
-            .Include(m => m.TipoDeTransaccion)
-            .ToListAsync());
+        Console.WriteLine("filter " + filter?.ToLower().Trim());
+        Console.WriteLine("sorting " + sorting);
+        Console.WriteLine("since " + since);
+        Console.WriteLine("until " + until);
+        var transacciones = await context.Transaccion
+            .Include(t => t.Empleado)
+            .Include(t => t.TipoDeTransaccion)
+            .ToListAsync();
+        var type = sorting == null ? "TIPO_DE_TRANSACCION" : sorting.ToUpper();
+
+        if (transacciones.Count != 0)
+        {
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                transacciones = type switch
+                {
+                    "TIPO_DE_TRANSACCION" => transacciones.Where(t =>
+                            t.TipoDeTransaccion!.Nombre.Contains(filter, StringComparison.CurrentCultureIgnoreCase))
+                        .ToList(),
+                    "EMPLEADO" => transacciones.Where(t =>
+                            t.Empleado!.Nombre.Contains(filter, StringComparison.CurrentCultureIgnoreCase))
+                        .ToList(),
+                    _ => transacciones
+                };
+            }
+
+            if (since != null)
+            {
+                transacciones = transacciones.Where(t => t.Fecha >= since)
+                    .ToList();
+            }
+
+            if (until != null)
+            {
+                transacciones = transacciones.Where(t => t.Fecha <= until)
+                    .ToList();
+            }
+        }
+
+        ViewData["filter"] = filter;
+        ViewData["sorting"] = type;
+        ViewData["since"] = since;
+        ViewData["until"] = until;
+        return View(transacciones);
     }
 
     // GET: Transaccion/Details/5
@@ -50,7 +95,9 @@ public class TransaccionController(NominaContext context) : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("Id,EmpleadoId,TipoDeTransaccionId,Fecha,Monto,Estado")] Transaccion transaccion)
+    public async Task<IActionResult> Create(
+        [Bind("Id,EmpleadoId,TipoDeTransaccionId,Fecha,Monto,Estado")]
+        Transaccion transaccion)
     {
         if (ModelState.IsValid)
         {
@@ -89,7 +136,9 @@ public class TransaccionController(NominaContext context) : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,EmpleadoId,TipoDeTransaccionId,Fecha,Monto,Estado")] Transaccion transaccion)
+    public async Task<IActionResult> Edit(int id,
+        [Bind("Id,EmpleadoId,TipoDeTransaccionId,Fecha,Monto,Estado")]
+        Transaccion transaccion)
     {
         if (id != transaccion.Id)
         {
